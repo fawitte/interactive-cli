@@ -58,6 +58,8 @@ cli.registerCommand("greet", (params, source)->{
 cli.start();
 ```
 
+Then we can write a simple text file containing the commands we wish to be executed in linear order. Every line of the file is interpreted a exactly one command.
+
 batch.txt:
 ```
 echo text="Let's greet a lot!"
@@ -69,7 +71,7 @@ printvar
 exit
 ```
 
-Type the following into your console after starting the program:
+Save the file in the root directory of you appliction and type the following into your console after starting the program:
 ```
 exec filename="batch.txt"
 ```
