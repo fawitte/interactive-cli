@@ -2,7 +2,7 @@
 An interactive cli for Java that can be used for example for prototyping applications with multiple threads that need to be controlled during runtime (e.g. server or client). This is very useful for testing diverse application states and transitions between them without rewriting the code every time.
 
 ## Example usage
-The example below demonstrates an easy way for using this "library" and creating your own commands for controlling your application.
+> The example below demonstrates an easy way for using this "library" and creating your own commands for controlling your application.
 ```
 InteractiveCLI cli = new InteractiveCLI();
 
@@ -18,9 +18,8 @@ cli.registerCommand("greet", (params, source)->{
 cli.start();
 ```
 
-If you implement the above code in a main-Method and run it, you can use the console to trigger commands. 
-
-> Try the following for example:
+>If you implement the above code in a main-Method and run it, you can use the console to trigger commands. 
+Try the following for example:
 ```
 greet
 greet name=Heinz
@@ -39,7 +38,7 @@ Hello Max Mustermann!
 ## Example executing commands from a file
 Sometimes it is way more comfortable to use a list of commands already defined in a file, so does this example.
 
-The first thing to do here is specify the commands that can be used by the file and inside the console after starting the application:
+> The first thing to do here is specify the commands that can be used by the file and inside the console after starting the application:
 ```
 InteractiveCLI cli = new InteractiveCLI();
 		
@@ -88,7 +87,7 @@ Variables:
 .
 ```
 
-You can also easily print every line before executing it (e.g. for debug purposes):
+> You can also easily print every line before executing it (e.g. for debug purposes):
 ```
 exec filename="batch.txt" print-lines
 ```
