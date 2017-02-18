@@ -20,11 +20,14 @@ cli.start();
 If you implement the above code in a main-Method and run it, you can use the console to trigger commands. Try the following for example:
 ```
 greet
+greet name=Heinz
 setvar who="Max Mustermann"
 greet name=[who]
 exit
 ```
 The above cli-commands should print the following output:
 > Hello World!
+>
+> Hello Heinz!
 >
 > Hello Max Mustermann!
