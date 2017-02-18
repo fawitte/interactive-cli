@@ -58,7 +58,7 @@ cli.registerCommand("greet", (params, source)->{
 cli.start();
 ```
 
-batch.txt
+batch.txt:
 ```
 echo text="Let's greet a lot!"
 setvar karl.name="Karl-Heinz Müller" karl.age="42"
@@ -74,7 +74,7 @@ Type the following into your console after starting the program:
 exec filename="batch.txt"
 ```
 
-Expected console output
+Expected console output:
 ```
 Executing file: exec/testvars.txt
 Let's greet a lot!
