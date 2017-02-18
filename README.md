@@ -26,4 +26,5 @@ exit
 ```
 The above cli-commands should print the following output:
 > Hello World!
+>
 > Hello Max Mustermann!
