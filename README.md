@@ -6,13 +6,24 @@ An interactive cli for Java that can be used for example for prototyping applica
 InteractiveCLI cli = new InteractiveCLI();
 
 cli.registerCommand("exit", Commands.EXIT);
-cli.registerCommand("set", Commands.SETVAR);
-cli.registerCommand("print", Commands.PRINTVAR);
+cli.registerCommand("setvar", Commands.SETVAR);
+cli.registerCommand("printvar", Commands.PRINTVAR);
 
-cli.registerCommand("greet", (params, cli)->{
+cli.registerCommand("greet", (params, source)->{
   String name = params.getOrDefault("name", "World");
   System.out.println("Hello " + name + "!");
 });
 
 cli.start();
 ```
+
+If you implement the above code in a main-Method and run it, you can use the console to trigger commands. Try the following for example:
+```
+greet
+setvar who="Max Mustermann"
+greet name=[who]
+exit
+```
+The above cli-commands should print the following output:
+> Hello World!
+> Hello Max Mustermann!
